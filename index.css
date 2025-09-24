@@ -15,19 +15,9 @@ html, body {
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background: url('./color-background.png') no-repeat center center/cover;
+  background: url('./cricket2.jpeg') no-repeat center center/cover;
   min-height: 100vh;
   color: white;            
-}
-
-#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1; /* Make sure it stays behind */
 }
 
 .container {
@@ -35,10 +25,9 @@ body {
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  margin-top: 6%;
   border: 3px solid white;
 }
 
@@ -54,56 +43,65 @@ h1 {
 
 .section {
   margin: 20px 0;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
-  background: #B10085;
+  background: #0088cc;
   color: white;
   border: none;
   padding: 10px 20px;
-  padding-inline: 30px;
+  border-radius: 25px;
   font-size: 18px;
-  margin-top: 6%;
-  border-radius: 10%;
   font-weight: bold;
   cursor: pointer;
+  transition: 0.5s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .whatsapp-btn{
   background: green;
   color: white;
   font-size:14px;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 10px 20px;  
 }
 
+@keyframes horizontalPulse {
+  0% {
+      transform: scaleX(1);
+  }
+
+  20% {
+      transform: scaleX(0.5);
+      /* Shrink horizontally */
+  }
+
+  40% {
+      transform: scaleX(1);
+      /* Back to normal */
+  }
+
+  100% {
+      transform: scaleX(1);
+      /* Hold still for 3 seconds */
+  }
+}
 
 .btn {
   display: inline-block;
   padding: 15px 30px;
-  font-size: 28px;
-  color: white;  
-  background-color: #B10085;
-  border-radius: 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #1DA1F2;
+  border-radius: 50px;
   border: none;
-  cursor: pointer;  
-  padding-inline: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: horizontalPulse 2.5s infinite ease-in-out;
   /* Runs every 4s (1s transition + 3s pause) */
-}
-
-.second-btn{
-  display: inline-block;
-  padding: 2px 5px;
-  font-size: 30px;
-  color: rgb(165, 3, 3);
-  background-color: #f8f9fa;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;  
 }
 
 .btn img {
@@ -113,16 +111,10 @@ h1 {
 
 @media (max-width: 600px) {
   .btn {
-      font-size: 17px;
-      padding-inline: 30px;
+      font-size: 14px;
       /* Reduce font size for smaller screens */
-      max-width: 95%;
+      max-width: 90%;
       /* Ensure it adapts to mobile screens */
-  }
-  .second-btn{
-    font-size: 17px;
-    max-width: 60%;
-    font-weight: bold;
   }
 }
 
